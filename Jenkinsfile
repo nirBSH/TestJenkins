@@ -8,12 +8,12 @@ pipeline {
         }
         stage('Install Dependencies') {  // Step 2: Install dependencies
             steps {
-                sh 'pip install pytest'  // Install pytest
+                bat 'pip install pytest'  // Install pytest
             }
         }
         stage('Run Tests') {  // Step 3: Run tests
             steps {
-                sh 'pytest test.py'  // Run pytest on test.py
+                bat 'pytest test.py'  // Run pytest on test.py
             }
         }
     }
